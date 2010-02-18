@@ -36,7 +36,7 @@ SECRET_KEY = 1/0
 
 ## Media
 
-MEDIA_ROOT = PROJECT_DIR / 'static' / 'media' / '' # Ensure it has a trailing slash.
+MEDIA_ROOT = PROJECT_DIR / 'media' / '' # Ensure it has a trailing slash.
 MEDIA_URL = '/media/'
 ADMIN_MEDIA_PREFIX = '/media/admin/'
 ADMIN_MEDIA_ROOT = path(django.__file__).abspath().dirname() / 'contrib' / 'admin' / 'media'
