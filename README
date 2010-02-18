@@ -8,7 +8,7 @@ post, “[Django Project Conventions, Revisited][blog post]”.
 
 ## Features
 
-*   Designed to work with [`virtualenv`][venv] and [`pip`][pip] from the start.
+*   Designed to work with [virtualenv][venv] and [pip][pip] from the start.
 
   [venv]: http://pypi.python.org/pypi/virtualenv
   [pip]: http://pip.openplans.org/
@@ -101,7 +101,7 @@ post, “[Django Project Conventions, Revisited][blog post]”.
 
 ## Managing Your Site
 
-There is no `manage.py` file here; use [`django-boss`][django-boss] or
+There is no `manage.py` file here; use [django-boss][django-boss] or
 `django-admin.py` (which will be on your path after you install Django):
 
     $ django-admin.py syncdb
