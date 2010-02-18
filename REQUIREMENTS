@@ -1,5 +1,5 @@
 # PyPI packages
-Django==1.1
+Django==1.1.1
 
 # Static files
 http://pypi.python.org/packages/source/p/path.py/path-2.2.zip
