@@ -1,0 +1,6 @@
+*.log
+*.pyc
+*.pyo
+*.sqlite3
+.DS_Store
+/etc

@@ -1,0 +1,10 @@
+syntax: glob
+
+*.log
+*.pyc
+*.pyo
+*.sqlite3
+.DS_Store
+
+syntax: regexp
+^etc
