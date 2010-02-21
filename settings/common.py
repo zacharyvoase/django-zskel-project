@@ -9,7 +9,7 @@ import sys
 
 ## Project
 
-PROJECT_DIR = path(__file__).abspath().dirname().parent
+PROJECT_DIR = path(__file__).abspath().realpath().dirname().parent
 PROJECT_NAME = PROJECT_DIR.basename()
 SITE_DIR = PROJECT_DIR.parent
 
