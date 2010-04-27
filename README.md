@@ -1,5 +1,3 @@
-<!--*-markdown-*-->
-
 # Zack’s Skeleton Django Project
 
 This is a small skeleton project based on the principles described in my blog
