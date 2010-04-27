@@ -45,27 +45,24 @@ post, “[Django Project Conventions, Revisited][blog post]”.
 
 2.  Clone this repo into a sub-directory of the new virtualenv:
 
-        $ hg clone http://bitbucket.org/zacharyvoase/django-zskel-project myproject
+        $ git clone 'git://github.com/zacharyvoase/django-zskel-project.git' myproject
         $ cd myproject/
         
         # Remove .empty files, used to make Hg track otherwise-empty dirs.
         $ find . -name '.empty' -exec rm {} \;
         
-        $ rm .gitignore # OR
-        $ rm .hgignore
+        $ rm .hgignore # OR
+        $ rm .gitignore
 
-3.  Remove the pointer to the Bitbucket project:
+3.  Remove the pointer to the GitHub project:
 
-        $ rm .hg/hgrc
+        $ git config --unset remote.origin.url
     
-    Later you’ll probably want to re-add the `.hg/hgrc` file with a pointer to
+    Later you’ll probably want to re-add this configuration with a pointer to
     your upstream repo. You can do that with the following command (mutatis
     mutandem):
     
-        $ cat > .hg/hgrc <<EOF
-        [paths]
-        default = ssh://hg@bitbucket.org/USERNAME/REPONAME
-        EOF
+        $ git config remote.origin.url 'git@github.com:USERNAME/PROJECT.git'
 
 4.  Go through the following files, editing as necessary:
     
@@ -106,12 +103,14 @@ There is no `manage.py` file here; use [django-boss][django-boss] or
     $ django-admin.py runserver
     $ django-admin.py test myapp
 
+  [django-boss]: http://github.com/zacharyvoase/django-boss
+
 
 ## More Information
 
 This layout is based on my original [blog post][]; read that for comprehensive
 information on the architecture and rationale behind this project. You can use
-the Bitbucket [issue tracker][] to report bugs or make suggestions.
+the GitHub [issue tracker][] to report bugs or make suggestions.
 
   [blog post]: http://blog.zacharyvoase.com/2010-02-03-django-project-conventions-revisited
-  [issue tracker]: http://bitbucket.org/zacharyvoase/django-zskel-project/issues/
+  [issue tracker]: http://github.com/zacharyvoase/django-zskel-project/issues
