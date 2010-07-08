@@ -25,12 +25,16 @@ DB_DIR = SITE_DIR / 'db'
 if not DB_DIR.exists():
     DB_DIR.makedirs()
 
-DATABASE_ENGINE = 'sqlite3'
-DATABASE_NAME = DB_DIR / 'development.sqlite'
-DATABASE_USER = ''
-DATABASE_PASSWORD = ''
-DATABASE_HOST = ''
-DATABASE_PORT = ''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': DB_DIR / 'development.sqlite3',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+    }
+}
 
 
 ## Caching

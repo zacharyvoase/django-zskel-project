@@ -18,16 +18,17 @@ sys.path.append(PROJECT_DIR / 'apps')
 sys.path.append(PROJECT_DIR / 'libs')
 
 ADMINS = (
-    ('Zachary Voase', 'zacharyvoase@me.com'),
+    ('Zachary Voase', 'z@zacharyvoase.com'),
 )
 
 MANAGERS = ADMINS
 
 TIME_ZONE = 'Europe/London'
 LANGUAGE_CODE = 'en-gb'
+USE_I18N = False
+USE_L10N = True
 
 SITE_ID = 1
-USE_I18N = False
 
 ## Replace this in every installation. It should be a random sequence of about
 ## 50 characters, and should not be shared with anyone.
@@ -72,7 +73,9 @@ ROOT_URLCONF = PROJECT_NAME + '.urls'
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
     
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
@@ -90,6 +93,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.messages',
     'django.contrib.sessions',
     'django.contrib.sites',
     
