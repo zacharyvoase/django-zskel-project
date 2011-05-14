@@ -16,12 +16,12 @@ urlpatterns = patterns('',
 if 'django.contrib.admin' in settings.INSTALLED_APPS:
     from django.contrib import admin
     admin.autodiscover()
-    
+
     if 'django.contrib.admindocs' in settings.INSTALLED_APPS:
         urlpatterns += patterns('',
             url(r'^admin/doc/', include('django.contrib.admindocs.urls'))
         )
-    
+
     urlpatterns += patterns('',
         url(r'^admin/', include(admin.site.urls)),
     )
@@ -35,7 +35,7 @@ if 'django.contrib.admin' in settings.INSTALLED_APPS:
 
 if settings.DEBUG:
     import re
-    
+
     urlpatterns += patterns('django.views.static',
         url(r'^%s(?P<path>.*)$' % re.escape(settings.MEDIA_URL.lstrip('/')),
             'serve', {'document_root': settings.MEDIA_ROOT}),

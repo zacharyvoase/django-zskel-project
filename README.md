@@ -28,7 +28,7 @@ post, “[Django Project Conventions, Revisited][blog post]”.
 
 *   Compatible with virtually any VCS, and most deployment strategy. Comes with
     VCS ignore files for [Mercurial][] and [Git][].
-  
+
   [mercurial]: http://mercurial.selenic.com/
   [git]: http://git-scm.com/
 
@@ -36,7 +36,7 @@ post, “[Django Project Conventions, Revisited][blog post]”.
 ## Installation
 
 1.  Make, enter and activate a virtualenv:
-    
+
         $ virtualenv mysite
         New python executable in mysite/bin/python
         Installing setuptools............done.
@@ -47,25 +47,25 @@ post, “[Django Project Conventions, Revisited][blog post]”.
 
         $ git clone 'git://github.com/zacharyvoase/django-zskel-project.git' myproject
         $ cd myproject/
-        
+
         # Remove .empty files, used to make Hg track otherwise-empty dirs.
         $ find . -name '.empty' -exec rm {} \;
-        
+
         $ rm .hgignore # OR
         $ rm .gitignore
 
 3.  Remove the pointer to the GitHub project:
 
         $ git config --unset remote.origin.url
-    
+
     Later you’ll probably want to re-add this configuration with a pointer to
     your upstream repo. You can do that with the following command (mutatis
     mutandem):
-    
+
         $ git config remote.origin.url 'git@github.com:USERNAME/PROJECT.git'
 
 4.  Go through the following files, editing as necessary:
-    
+
     *   `settings/common.py`
     *   `settings/development.py`
     *   `urls.py`
@@ -75,20 +75,20 @@ post, “[Django Project Conventions, Revisited][blog post]”.
 5.  Symlink the project directory into the virtualenv’s `site-packages`:
 
         $ ln -s `pwd` ../lib/python2.6/site-packages/`basename pwd`
-    
+
     Replace `python2.6` with the installed version of Python on your machine.
 
 6.  Set the `DJANGO_SETTINGS_MODULE` environment variable now, and on every
     virtualenv activation:
-    
+
         $ export DJANGO_SETTINGS_MODULE=myproject.settings.development
         $ echo "!!" >> ../bin/activate
 
 7.  Install the basic project requirements:
-    
+
         $ easy_install pip
         $ pip install -r REQUIREMENTS
-    
+
     As you edit your `REQUIREMENTS` file, you can run that last command again;
     `pip` will realise which packages you’ve added and will ignore those already
     installed.

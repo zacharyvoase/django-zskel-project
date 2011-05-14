@@ -76,7 +76,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    
+
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
@@ -96,10 +96,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.sessions',
     'django.contrib.sites',
-    
+
     ## Third-party apps
     'debug_toolbar',
-    
+
     ## Local apps
     # Nothing here yet.
 )
