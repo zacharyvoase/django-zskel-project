@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
-import django
 import logging
-import warnings; warnings.simplefilter("ignore") # for the `path` module.
-from path import path
+import os
 import sys
+
+import django
+from path import path
 
 
 ## Project
