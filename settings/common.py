@@ -50,8 +50,8 @@ ADMIN_MEDIA_ROOT = path(django.__file__).abspath().dirname() / 'contrib' / 'admi
 DEFAULT_CONTENT_TYPE = 'application/xhtml+xml'
 
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.load_template_source',
-    'django.template.loaders.app_directories.load_template_source',
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
